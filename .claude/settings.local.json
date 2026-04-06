@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(g++ -std=c++17 -o main.exe main.cpp vectorops.cpp)",
+      "Bash(./main.exe)"
+    ]
+  }
+}

@@ -29,12 +29,11 @@ namespace vectorops {
 
     //------
     AddValue::AddValue(int val): amount(val) {}
-    void AddValue::operator()(int& num) const {
-        num += amount;
-
+    int AddValue::operator()(int num) const {
+        return num + amount;
     }
     void addToEach(std::vector<int>& v, int value) {
-        std::for_each(v.begin(), v.end(), AddValue(value));
+        std::transform(v.begin(), v.end(), v.begin(), AddValue(value));
     }
 
     //------

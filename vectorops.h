@@ -27,7 +27,7 @@ namespace vectorops {
         int amount;
     public:
         AddValue(int val);
-        void operator()(int& num) const;
+        int operator()(int num) const;
     };
     void addToEach(std::vector<int>& v, int value);
 
